@@ -8,14 +8,14 @@ public class Program {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		Products product = new Products();
+
 		System.out.println("Enter product data: ");
 		System.out.print("Name: ");
-		product.name = sc.next();
+		String name = sc.next();
 		System.out.print("Price: ");
-		product.price = sc.nextDouble();
-		System.out.print("Quantity in stock: ");
-		product.quantity = sc.nextInt();
+		double price = sc.nextDouble();
+		
+		Products product = new Products(name, price);
 		System.out.println();
 		System.out.println("Product data:" + product);
 		System.out.println();
