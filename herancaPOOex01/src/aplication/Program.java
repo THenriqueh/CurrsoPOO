@@ -1,0 +1,58 @@
+package aplication;
+
+import entities.Account;
+import entities.BusinessAccount;
+import entities.SavingAccount;
+
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Account acc1 = new Account(1001, "Thallis", 1000.0);
+		acc1.withdraw(200.0); 
+		System.out.println(acc1.getBalance());
+		
+		Account acc2 = new SavingAccount(1002, "Thallis",1000.00, 0.01);
+		acc2.withdraw(200.0);
+		System.out.println(acc2.getBalance());
+		
+		Account acc3 = new BusinessAccount(1003, "Ferreira", 1000.00, 400.00);
+		acc3.withdraw(200.0);
+		System.out.println(acc3.getBalance());
+		
+/*
+		Account acc = new Account(1001, "Thallis", 1000.0);
+		
+		BusinessAccount bacc = new BusinessAccount(1002, "Bianca", 0.0, 500.00);
+	
+		
+		//UPCASTING
+		
+		Account acc1 = bacc;
+		Account acc2 = new BusinessAccount(1003, "Bob", 0.0, 200.0);
+		Account acc3 = new SavingAccount(1004, "Ana", 0.0, 0.01);
+		
+		//DOWNCASTINg
+		
+		BusinessAccount acc4 = (BusinessAccount) acc2;
+		acc4.setLoanLimit(100.0);
+		
+		//BusinessAccount acc5 = (BusinessAccount) acc3;
+		
+		if (acc3 instanceof BusinessAccount ) {
+			BusinessAccount acc5 = (BusinessAccount) acc3;
+			acc5.loan(200.0);
+			System.out.println("Loan!");
+			
+		}
+		
+		if (acc3 instanceof SavingAccount) {
+			SavingAccount acc5 = (SavingAccount) acc3;
+			acc5.updateBalance();
+			System.out.println("UPDATE");
+		}
+*/
+	}
+
+}
